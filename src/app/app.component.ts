@@ -8,5 +8,24 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'tut4';
+  
+  name: string = "";
+  displayName: string="";
+
+  email:string="";
+  displayEmail:string="";
+
+  getName(){
+    this.displayName= this.name;
+  }
+
+  setName(event:Event){
+    this.name=(event.target as HTMLInputElement).value;
+
+  }
+
+  getEmail(val:string){
+    this.email=val;
+    this.displayEmail= val;
+  }
 }
